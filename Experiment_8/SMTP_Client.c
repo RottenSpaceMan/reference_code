@@ -9,7 +9,7 @@
 
 #define SMTP_SERVER "smtp.gmail.com"
 #define SMTP_PORT 465
-#define SENDER "asender@gmai.com"
+#define SENDER "asender@gmail.com"
 #define PASSWORD "asender!123!"
 #define RECEIVER "areceiver@gmail.com"
 
@@ -60,7 +60,7 @@ int main(){
   ssl = SSL_new(ctx);
   SSL_set_fd(ssl, sockfd);
   if(SSL_connect(ssl) != 1){
-    ERR_print_errors(stderr);
+    ERR_print_errors_fp(stderr);
     return 1;
   }
 
